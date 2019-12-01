@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>클라이언트 구축 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <h2>Vue.js 데이터 바인딩</h2>
+    <div id="instance">
+      <img v-bind:src="img" width="150px" height="150px"></img>
+      <div class="radio_select">
+        <div>Back Number of NBA Player</div><br>
+        <input type="radio" name="player" value="23" v-model="checks">
+        <label>Leborn James</label><br>
+        <input type="radio" name="player" value="0" v-model="checks">
+        <label>Russel Westbrook</label><br>
+        <input type="radio" name="player" value="00" v-model="checks">
+        <label>Damian Lillard</label><br>
+        <input type="radio" name="player" value="77" v-model="checks">
+        <label>Luka Doncic</label><br>
+        <input type="radio" name="player" value="11" v-model="checks">
+        <label>Klay Thompson</label><br>
+      </div>
+      <br><div>Back Number : {{ checks }}</div><br>
+    </div>
+
+    <script type="text/javascript">
+      var app = new Vue({
+        el: '#instance',
+        data () {
+          return {
+            img: 'https://kr.vuejs.org/images/logo.png',
+            checks: ''
+          }
+        }
+      })
+    </script>
+
+  </body>
+</html>
